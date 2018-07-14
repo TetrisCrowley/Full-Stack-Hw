@@ -12,8 +12,12 @@
       <li>
         <a href="/weirdFoods/<%=i%>"> <%= weirdFoods[i].name%></a>
 
-        <!-- <%= weirdFoods[i].%> -->
+        <%= weirdFoods[i].countryOfOrigin%>
+
+        <%= weirdFoods[i].description%>
+
         <form method="POST" action="/weirdFoods/<%=weirdFoods[i].id%>?_method=DELETE">
+          <input type="submit" class="delete" value="Delete">
         </form>
 
         <a href="/weirdFoods/<%=weirdFoods[i].id%>/edit">Edit</a>

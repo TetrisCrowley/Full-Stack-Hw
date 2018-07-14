@@ -7,17 +7,18 @@
   <h1>Weird Foods Show Page</h1>
 
   <h3>Food Name: <%= weirdFood.name%></h3>
-<!--   <h4>Fruit Color: <%= fruit.color%></h4>
+  <h4>Country of Origin: <%= fruit.countryOfOrigin%></h4>
+  <h4>Description: <%= weirdFood.description%>
 
   <h2>
-    <% if(fruit.readyToEat === true) { %>
-        <span>It is ready to eat</span>
+    <% if(weirdFood.legal === true) { %>
+        <span>It is legal in the US</span>
     <% } else { %>
-        <span>It is not ready to eat</span>
+        <span>It is not legal in the US</span>
     <% } %>
-  </h2> -->
+  </h2>
 
-    <a href="/fruits">go back</a>
+    <a href="/weirdFoods">go back</a>
 
 </body>
 </html>

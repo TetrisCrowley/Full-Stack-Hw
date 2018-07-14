@@ -9,12 +9,13 @@
   <form method="POST" action="/weirdFoods/<%=weirdFood.id%>?_method=PUT">
 
     Name: <input type="text" name="name" value="<%= weirdFood.name%>">
-    <!-- Color: <input type="text" name="color" value="<%= fruit.color%>">
-    Is Ready to eat: <input type="checkbox" name="readToEat" 
-      <% if(fruit.readyToEat === true){%>
+    Country of Origin: <input type="text" name="color" value="<%= fruit.countryOfOrigin%>">
+    Description: <input type="text" name="color" value="<%= fruit.description%>">
+    Is it legal in the US: <input type="checkbox" name="legal" 
+      <% if(fruit.legal === true){%>
         checked
       <% } %>
-      /> -->
+      />
       <br/>
 
       <input type="submit" value="Submit Changes"/>
