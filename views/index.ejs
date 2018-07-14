@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <title></title>
 </head>
 <body>
+  <h1>Weird Foods</h1>
+
+  <ul>
+    <% for(let i = 0; i < weirdFoods.length; i++) {%>
+      <li>
+        <a href="/weirdFoods/<%=i%>"> <%= weirdFoods[i].name%></a>
+
+        <!-- <%= weirdFoods[i].%> -->
+        <form method="POST" action="/weirdFoods/<%=weirdFoods[i].id%>?_method=DELETE">
+        </form>
+
+        <a href="weirdFoods/<%=weirdFoods[i].id%>/edit">Edit</a>
+      </li>
+    <%}%>
+  </ul>
+
+  <nav>
+    <a href="/weirdFoods/new">Add a New Food</a>
+  </nav>
 
 </body>
 </html>
