@@ -4,6 +4,21 @@
   <title></title>
 </head>
 <body>
+  <h1>Edit Foods</h1>
+
+  <form method="POST" action="/weirdFoods/<%=weirdFoods.id%>?_method=PUT">
+
+    Name: <input type="text" name="name" value="<%= fruit.name%>">
+    <!-- Color: <input type="text" name="color" value="<%= fruit.color%>">
+    Is Ready to eat: <input type="checkbox" name="readToEat" 
+      <% if(fruit.readyToEat === true){%>
+        checked
+      <% } %>
+      /> -->
+      <br/>
+
+      <input type="submit" value="Submit Changes"/>
+  </form>
 
 </body>
 </html>
