@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/27017/weirdFood');
+mongoose.connect('mongodb://localhost/weirdFood');
 
 mongoose.connection.on('connected', () => {
   console.log('mongoose is connected')

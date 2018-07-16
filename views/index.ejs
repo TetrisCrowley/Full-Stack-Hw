@@ -10,11 +10,11 @@
   <ul>
     <% for(let i = 0; i < weirdFoods.length; i++) {%>
       <li>
-        <a href="/weirdFoods/<%=i%>"> <%= weirdFoods[i].name%></a>
+        <a href="/weirdFoods/<%=weirdFoods[i].id%>"> <%= weirdFoods[i].name%></a><br>
 
-        <%= weirdFoods[i].countryOfOrigin%>
+        <%= weirdFoods[i].countryOfOrigin%><br>
 
-        <%= weirdFoods[i].description%>
+        <%= weirdFoods[i].description%><br>
 
         <form method="POST" action="/weirdFoods/<%=weirdFoods[i].id%>?_method=DELETE">
           <input type="submit" class="delete" value="Delete">

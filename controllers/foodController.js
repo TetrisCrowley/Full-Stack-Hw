@@ -10,6 +10,7 @@ router.use((req, res, next) => {
 
 // Index
 router.get('/', (req, res) => {
+  console.log(WeirdFoods, "this is weirdFoods")
   WeirdFoods.find({}, (err, allWeirdFoods) => {
     if(err){
       res.send(err);
@@ -47,7 +48,7 @@ router.get('/new', (req, res) => {
 
 // Edit
 router.get('/:id/edit', (req, res) => {
-  WeirdFoods.findById(req.params.id, (err foundWeirdFood) => {
+  WeirdFoods.findById(req.params.id, (err, foundWeirdFood) => {
     res.render('edit.ejs', {
       weirdFood: foundWeirdFood,
     });
@@ -56,9 +57,11 @@ router.get('/:id/edit', (req, res) => {
 
 
 // Show
-router.get('/:index', (req, res) => {
-  res.render('show.ejs', {
-    weirdFood: WeirdFoods[req.params.index]
+router.get('/:id', (req, res) => {
+  WeirdFoods.findById(req.params.id, (err, foundWeirdFood) => {
+    res.render('show.ejs', {
+      weirdFood: foundWeirdFood
+    });
   });
 });
 

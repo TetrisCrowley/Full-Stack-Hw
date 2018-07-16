@@ -9,7 +9,7 @@ require('./db/db');
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
-app.user(express.static('public'));
+// app.user(express.static('public'));
 
 const foodController = require('./controllers/foodController');
 
